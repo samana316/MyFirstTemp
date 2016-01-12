@@ -1,4 +1,5 @@
-﻿using MyFirstTemp.Core.Models;
+﻿using System;
+using MyFirstTemp.Core.Models;
 using MyFirstTemp.Core.Repositories;
 
 namespace MyFirstTemp.Core.Services
@@ -10,6 +11,11 @@ namespace MyFirstTemp.Core.Services
         public MyService(
             IMyRepository repository)
         {
+            if (ReferenceEquals(repository, null))
+            {
+                throw new ArgumentNullException("repository");
+            }
+
             this.repository = repository;
         }
 
