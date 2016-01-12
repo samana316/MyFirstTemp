@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MyFirstTemp.Core.Models;
 using MyFirstTemp.Core.Repositories;
 
@@ -27,7 +24,7 @@ namespace MyFirstTemp.Infrastructure.Data
         public int Add(
             MyModel model)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException("Don't want this code.");
         }
 
         public IEnumerable<MyModel> Get()
